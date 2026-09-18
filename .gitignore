@@ -1,0 +1,21 @@
+# 비밀 키 — 절대 커밋 금지
+serviceAccountKey.json
+*serviceAccount*.json
+.env
+*.pem
+
+# 모델 가중치 / 데이터셋
+*.pt
+*.tflite
+*_saved_model/
+datasets/
+runs/
+
+# 파이썬
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
