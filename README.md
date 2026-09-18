@@ -75,11 +75,12 @@ YOLOv8n (사전학습) → 위 데이터셋으로 학습 → tflite 변환 → �
 - 수거함 3개(캔·유리·플라스틱)마다: 서보모터 · 초음파 센서 · 소리 센서 · 상태 LED · 만재 LED
 - 제어 회로는 브레드보드로 구성 (`docs/wiring.jpg`, `docs/block_diagram.png`)
 
-## 6. 사용자 앱
+## 6. 사용자 피드백 (팀원 담당)
 
-- Firebase 인증 기반 로그인 화면 (`app/login.html`)
-- 라즈베리파이가 Firestore를 구독해 로그인한 사용자를 인식 (`app/pi_listener.py`)
-- 파이 쪽 수신 서버 (`app/pi_server.py`)
+올바르게 배출하면 포인트를 적립해주는 웹 서비스가 함께 있습니다.
+사용자는 QR로 접속해 적립한 포인트와 탄소 배출 저감량을 확인합니다.
+
+> 이 부분은 팀원이 담당했으며, 이 저장소에는 포함하지 않았습니다.
 
 ## 7. 폴더 구성
 
@@ -89,9 +90,6 @@ device/   trash_detect.py      메인 (검출 + 센서 + 구동부 제어)
           test_servo.py        서보 단독 테스트
           test_ultrasonic.py   초음파 단독 테스트
           labels.txt           클래스 정의
-app/      login.html           로그인 화면
-          pi_listener.py       Firestore 구독
-          pi_server.py         파이 수신 서버
 docs/     block_diagram.png    시스템 블록도
           flow_diagram.png     동작 흐름도
           roboflow_dataset.png 데이터셋 생성 화면
@@ -109,5 +107,4 @@ python train/train_yolov8.py
 python device/trash_detect.py
 ```
 
-> 이 저장소에는 **API 키, Firebase 서비스 계정 키, 학습된 가중치, 데이터셋이 포함되어 있지 않습니다.**
-> `app/login.html`의 Firebase 설정값과 `app/pi_listener.py`가 읽는 `serviceAccountKey.json`은 직접 채워야 합니다.
+> 이 저장소에는 **API 키, 학습된 가중치, 데이터셋이 포함되어 있지 않습니다.**
